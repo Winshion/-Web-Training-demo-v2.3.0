@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>51JOB数据分析前端</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+        }
+
+        @font-face {
+            font-family: 'MyFont';
+            src: url('./STCAIYUN.TTF'), url('./STZHONGS.TTF');
+        }
+
+        header {
+            /* 设置背景颜色和布局 */
+            background-color: #333;
+            height: 160px;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        /* .h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: rgb(206, 206, 206);
+} */
+
+        header>a {
+            /* 设置字体 */
+            font-family: '华文中宋';
+            font-size: 45px;
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            text-align: center;
+            top: 30px;
+            left: 35%;
+        }
+
+        header>span {
+            position: relative;
+            top: 30px;
+            left: 42%;
+        }
+
+        header>span>a {
+            text-decoration: none;
+            font-family: sans-serif;
+            color: rgb(100, 100, 100);
+            position: relative;
+            top: 0;
+            left: -1.5%;
+        }
+
+        #backtohome {
+            color: rgb(255, 219, 219);
+        }
+
+        header.search {
+            background-color: #222;
+            height: 20%;
+            position: relative;
+        }
+
+        /*城市搜索框*/
+
+        /* div.city {
+            position: absolute;
+            left: 10%;
+            top: 70%;
+        }
+
+        header>div>div>input.city {
+            height: 35px;
+            width: 165px;
+            background: #222;
+            outline: none;
+            padding-left: 10px;
+            color: blanchedalmond;
+        }
+
+        #button4city {
+            color: rgb(214, 214, 214);
+            height: 35px;
+            width: 45px;
+            background-color: rgb(44, 44, 44);
+            font-family: 华文中宋;
+        }
+
+        #button4city:hover {
+            background-color: rgb(102, 102, 102);
+            cursor: pointer;
+        }
+
+        #button4city:active {
+            color: #444;
+            background: white;
+        } */
+
+        /*职位搜索框*/
+
+        /* div.job {
+            position: absolute;
+            left: 40%;
+            top: 70%;
+        }
+
+        header>div>div>input.job {
+            height: 35px;
+            width: 165px;
+            background: #222;
+            outline: none;
+            padding-left: 10px;
+            color: blanchedalmond;
+        }
+
+        #button4job {
+            color: rgb(214, 214, 214);
+            height: 35px;
+            width: 45px;
+            background-color: rgb(44, 44, 44);
+            font-family: 华文中宋;
+        }
+
+        #button4job:hover {
+            background-color: rgb(102, 102, 102);
+            cursor: pointer;
+        }
+
+        #button4job:active {
+            color: #444;
+            background: white;
+        } */
+
+        /*百度搜索框*/
+
+        div.baidu {
+            position: absolute;
+            left: 35%;
+            top: 70%;
+        }
+
+        header>div>div>input.baidu {
+            height: 35px;
+            width: 350px;
+            background: #222;
+            outline: none;
+            padding-left: 10px;
+            color: blanchedalmond;
+        }
+
+        #button4baidu {
+            color: rgb(214, 214, 214);
+            height: 35px;
+            width: 70px;
+            background-color: rgb(44, 44, 44);
+            font-family: 华文中宋;
+        }
+
+        #button4baidu:hover {
+            background-color: rgb(13, 77, 253);
+            cursor: pointer;
+        }
+
+        #button4baidu:active {
+            color: rgb(255, 255, 255);
+            background: rgb(0, 74, 211);
+        }
+
+        main {
+            background-color: #555;
+            height: 620px;
+        }
+
+        main>div.canvas {
+            background-color: #777;
+            height: 95%;
+            width: 80%;
+            position: relative;
+            left: 10%;
+            top: 2.5%;
+            border-radius: 10px;
+            overflow: auto;
+        }
+
+        /*--------------------------------------------------*/
+        main>div>canvas>table {
+            overflow: auto;
+        }
+
+
+        main>div>canvas>table>tr,
+        td,
+        th {
+            border: 1px rgb(163, 163, 163) dotted;
+            border-collapse: collapse;
+            font-family: 华文中宋, 宋体, serif;
+            color: rgb(41, 40, 40);
+        }
+
+        /*--------------------------------------------------*/
+        footer {
+            height: 95px;
+            width: auto;
+            background-color: #777;
+        }
+
+        footer>div {
+            position: relative;
+            text-align: center;
+            top: 20px;
+        }
+
+        footer>div>p {
+            color: black;
+            font-family: 华文中宋, 宋体;
+        }
+
+        footer>div>a {
+            text-decoration: none;
+            color: rgb(53, 53, 53);
+            font-family: 华文中宋;
+        }
+    </style>
+    <script>
+        // 百度搜索按钮按下之后的页面跳转函数
+        function onclick_baidu() {
+            var text_input;
+            text_input = document.getElementById('baidu').value;
+            if (text_input == "") {
+                window.location.href = "https://www.baidu.com/";
+            }
+            else {
+                search_text = "https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=" + text_input;
+                window.location.href = search_text;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="h1"></div>
+        <a href="">
+            职位基本信息列表
+        </a>
+        <span>
+            <!-- 超链接全部要改！ -->
+            <a href="../" id="backtohome">回到首页</a>
+            <a href="https://github.com/Winshion">| GitHub支持 |</a>
+            <a>QQ：275696925</a>
+        </span>
+        <!-- 搜索框条 -->
+        <div class="search">
+            <!-- <div class="city">
+                <input class="city" placeholder="请输入城市...">
+                <button id="button4city">搜索</button>
+            </div>
+
+            <div class="job">
+                <input class="job" placeholder="请输入职位...">
+                <button id="button4job">搜索</button>
+            </div> -->
+
+            <div class="baidu">
+                <input class="baidu" id="baidu" placeholder="百度搜索">
+                <button id="button4baidu" onclick="onclick_baidu()">百度一下</button>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="canvas">
+            <table>
+                <tr class="head">
+                    <th>职位名称</th>
+                    <th>薪酬</th>
+                    <th>城市</th>
+                    <th>公司名称</th>
+                    <th>公司类型</th>
+                    <th>公司规模</th>
+                    <th>公司经营方向</th>
+                    <th>发布日期</th>
+                </tr>
+                {% for each_line in dlist %}
+                <tr>
+                    {% for each in each_line %}
+                    <td>{{ each }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p class="description">©Copyright&nbsp;2021&nbsp;CQU&nbsp;Winshion|
+                重庆大学浅光居士</p>
+            <a href="https://www.cqu.edu.cn">重庆大学 |</a>
+            <a href="http://www.cse.cqu.edu.cn/index.htm">大数据与软件学院 |</a>
+            <a href="https://www.51job.com/">51JOB招聘人才网 |</a>
+            <a href="https://www.kaggle.com">Kaggle</a>
+        </div>
+    </footer>
+</body>
+
+</html>

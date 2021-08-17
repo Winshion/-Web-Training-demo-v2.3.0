@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('./STCAIYUN.TTF'), url('./STZHONGS.TTF');
+}
+
+header {
+    /* 设置背景颜色和布局 */
+    background-color: #333;
+    height: 160px;
+    margin-top: 5px;
+}
+
+/* .h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: rgb(206, 206, 206);
+} */
+
+header>a {
+    /* 设置字体 */
+    font-family: '华文中宋';
+    font-size: 45px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    top: 30px;
+    left: 40%;
+}
+
+header>span {
+    position: relative;
+    top: 30px;
+    left: 42%;
+}
+
+header>span>a {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: rgb(100, 100, 100);
+}
+
+#backtohome {
+    color: rgb(255, 219, 219);
+}
+
+header.search {
+    background-color: #222;
+    height: 20%;
+}
+
+/*城市搜索框*/
+
+div.city {
+    position: relative;
+    left: 10%;
+    top: 54px;
+}
+
+header>div>div>input.city {
+    height: 35px;
+    width: 165px;
+    background: #222;
+    outline: none;
+    padding-left: 10px;
+    color: blanchedalmond;
+}
+
+#button4city {
+    color: rgb(214, 214, 214);
+    height: 35px;
+    width: 45px;
+    background-color: rgb(44, 44, 44);
+    font-family: 华文中宋;
+}
+
+#button4city:hover {
+    background-color: rgb(102, 102, 102);
+    cursor: pointer;
+}
+
+#button4city:active {
+    color: #444;
+    background: white;
+}
+
+/*职位搜索框*/
+
+div.job {
+    position: relative;
+    left: 40%;
+    top: 18px;
+}
+
+header>div>div>input.job {
+    height: 35px;
+    width: 165px;
+    background: #222;
+    outline: none;
+    padding-left: 10px;
+    color: blanchedalmond;
+}
+
+#button4job {
+    color: rgb(214, 214, 214);
+    height: 35px;
+    width: 45px;
+    background-color: rgb(44, 44, 44);
+    font-family: 华文中宋;
+}
+
+#button4job:hover {
+    background-color: rgb(102, 102, 102);
+    cursor: pointer;
+}
+
+#button4job:active {
+    color: #444;
+    background: white;
+}
+
+/*百度搜索框*/
+
+div.baidu {
+    position: relative;
+    left: 70%;
+    top: -17px;
+}
+
+header>div>div>input.baidu {
+    height: 35px;
+    width: 165px;
+    background: #222;
+    outline: none;
+    padding-left: 10px;
+    color: blanchedalmond;
+}
+
+#button4baidu {
+    color: rgb(214, 214, 214);
+    height: 35px;
+    width: 70px;
+    background-color: rgb(44, 44, 44);
+    font-family: 华文中宋;
+}
+
+#button4baidu:hover {
+    background-color: rgb(13, 77, 253);
+    cursor: pointer;
+}
+
+#button4baidu:active {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 74, 211);
+}
+
+main {
+    background-color: #555;
+    height: 620px;
+}
+
+main>div.canvas {
+    background-color: #777;
+    height: 95%;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    top: 2.5%;
+    border-radius: 10px;
+}
+
+footer {
+    height: 95px;
+    width: auto;
+    background-color: #777;
+}
+
+footer>div {
+    position: relative;
+    text-align: center;
+    top: 20px;
+}
+
+footer>div>p {
+    color: black;
+    font-family: 华文中宋, 宋体;
+}
+
+footer>div>a {
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+    font-family: 华文中宋;
+}

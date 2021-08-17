@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('./STCAIYUN.TTF'), url('./STZHONGS.TTF');
+}
+
+header {
+    /* 设置背景颜色和布局 */
+    background-color: #333;
+    height: 200px;
+    margin-top: 5px;
+}
+
+/* .h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: rgb(206, 206, 206);
+} */
+
+header>a {
+    /* 设置字体 */
+    font-family: 小米兰亭 微软雅黑 sans-serif;
+    font-size: 45px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    top: 40px;
+    left: 30%;
+}
+
+header>span {
+    position: relative;
+    top: 40px;
+    left: 32%;
+}
+
+header>span>a {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: rgb(100, 100, 100);
+}
+
+header.search {
+    background-color: #222;
+    height: 20%;
+}
+
+/*城市搜索框*/
+
+div.city {
+    position: relative;
+    left: 10%;
+    top: 70px;
+}
+
+header>div>div>input.city {
+    height: 35px;
+    width: 165px;
+    background: #222;
+    outline: none;
+    padding-left: 10px;
+    color: blanchedalmond;
+}
+
+#button4city {
+    color: rgb(214, 214, 214);
+    height: 35px;
+    width: 45px;
+    background-color: rgb(44, 44, 44);
+    font-family: 华文中宋;
+}
+
+#button4city:hover {
+    background-color: rgb(102, 102, 102);
+    cursor: pointer;
+}
+
+#button4city:active {
+    color: #444;
+    background: white;
+}
+
+/*职位搜索框*/
+
+div.job {
+    position: relative;
+    left: 40%;
+    top: 32px;
+}
+
+header>div>div>input.job {
+    height: 35px;
+    width: 165px;
+    background: #222;
+    outline: none;
+    padding-left: 10px;
+    color: blanchedalmond;
+}
+
+#button4job {
+    color: rgb(214, 214, 214);
+    height: 35px;
+    width: 45px;
+    background-color: rgb(44, 44, 44);
+    font-family: 华文中宋;
+}
+
+#button4job:hover {
+    background-color: rgb(102, 102, 102);
+    cursor: pointer;
+}
+
+#button4job:active {
+    color: #444;
+    background: white;
+}
+
+/*百度搜索框*/
+
+div.baidu {
+    position: relative;
+    left: 70%;
+    top: -5px;
+}
+
+header>div>div>input.baidu {
+    height: 35px;
+    width: 165px;
+    background: #222;
+    outline: none;
+    padding-left: 10px;
+    color: blanchedalmond;
+}
+
+#button4baidu {
+    color: rgb(214, 214, 214);
+    height: 35px;
+    width: 70px;
+    background-color: rgb(44, 44, 44);
+    font-family: 华文中宋;
+}
+
+#button4baidu:hover {
+    background-color: rgb(13, 77, 253);
+    cursor: pointer;
+}
+
+#button4baidu:active {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 74, 211);
+}
+
+main {
+    background-color: #555;
+    height: 620px;
+}
+
+/*四个大超链接*/
+
+main>div {
+    background: #444;
+    float: left;
+    width: 20%;
+    height: 80%;
+    position: relative;
+    top: 5%;
+    left: 20px;
+    margin: 2%;
+    border-radius: 0.5cm;
+}
+
+main>div.wordcloud:hover {
+    background: rgb(255, 75, 75);
+    transition: 0.5s linear;
+}
+
+main>div.form:hover {
+    background: rgb(238, 226, 59);
+    transition: 0.5s linear;
+}
+
+main>div.boxgraph:hover {
+    background: rgb(50, 190, 109);
+    transition: 0.5s linear;
+}
+
+main>div.intro:hover {
+    background: rgb(36, 111, 197);
+    transition: 0.5s linear;
+}
+
+main>div>a {
+    display: block;
+    text-decoration: none;
+    color: rgb(201, 201, 201);
+    font-size: 150px;
+    font-family: '华文彩云', '黑体', serif;
+    padding-left: 20px;
+    position: absolute;
+    left: 13%;
+    top: 25%;
+}
+
+/* main>div>a:hover {
+    color: rgb(53, 53, 53);
+} */
+
+main>div>div {
+    font-size: 45px;
+    font-family: 小米兰亭, 微软雅黑, sans-serif;
+    position: relative;
+    top: 70%;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+main>div>div.wc {
+    color: rgb(255, 75, 75);
+}
+
+main>div>div.fm {
+    color: rgb(238, 226, 59);
+}
+
+main>div>div.bg {
+    color: rgb(50, 190, 109);
+}
+
+main>div>div.intr {
+    color: rgb(36, 111, 197);
+}
+
+footer {
+    height: 95px;
+    width: auto;
+    background-color: #777;
+}
+
+footer>div {
+    position: relative;
+    text-align: center;
+    top: 20px;
+}
+
+footer>div>p {
+    color: black;
+    font-family: 华文中宋, 宋体;
+}
+
+footer>div>a {
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+    font-family: 华文中宋;
+}
